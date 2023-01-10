@@ -33,7 +33,7 @@ export class App extends Component {
     const { good, neutral, bad } = this.state;
     const options = Object.keys(this.state)
     return (
-      <div>
+      <>
         <Section title={"Please leave feedback"}><FeedbackOptions options={options} onLeaveFeedback={this.handleClick}/></Section>        
         <Section title={"Statistics"}>
           {this.countTotalFeedback() > 0
@@ -42,7 +42,7 @@ export class App extends Component {
             :
             (<Notification title={"There is no feedback"} />)} 
         </Section>
-      </div>  
+      </>  
   );
   }
 };
